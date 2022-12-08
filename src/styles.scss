@@ -1,0 +1,53 @@
+@use "@angular/material" as mat;
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: Barlow-Light;
+  src: url("/assets/fonts/Barlow-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Barlow-ExtraBold;
+  src: url("/assets/fonts/Barlow-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Barlow-SemiBold;
+  src: url("/assets/fonts/Barlow-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Barlow-Italic;
+  src: url("/assets/fonts/Barlow-Italic.ttf") format("truetype");
+}
+
+$my-primary: mat.define-palette(mat.$pink-palette);
+$my-accent: mat.define-palette(mat.$red-palette);
+$my-warn: mat.define-palette(mat.$red-palette);
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-primary,
+      accent: $my-accent,
+      warn: $my-warn,
+    ),
+  )
+);
+
+@include mat.all-component-themes($my-theme);
+
+
+body {
+  margin: 0;
+  font-family: Barlow-Light, sans-serif;
+}
+
+//font
+
+body {
+  font-family: "Roboto", Sans-serif;
+  color: #202020;
+  display: flex;
+  flex-direction: column;
+}
+

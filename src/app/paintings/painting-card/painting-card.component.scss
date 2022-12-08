@@ -1,0 +1,74 @@
+@import "~flag-icon-css/css/flag-icons.min.css";
+
+.expander {
+  text-align: right;
+}
+
+.mat-card-title {
+  margin-left: -1rem;
+}
+
+.mat-card {
+  font-family: Barlow-Light, sans-serif;
+  border-radius: 0.35rem;
+  padding: 0.5;
+  background-color: whitesmoke;
+}
+
+.mat-card-header {
+  height: 2.5rem;
+  display: flex;
+  text-align: start;
+  justify-content: start;
+  align-items: end;
+  background-color: whitesmoke;
+  font-family: Barlow-SemiBold, sans-serif;
+}
+
+.card-separator {
+  background-color: red;
+}
+
+mat-card img {
+  object-fit: contain;
+  max-width: 100%;
+  min-width: auto;
+  height: 20rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.card-id {
+  font-family: Barlow-SemiBold, sans-serif;
+}
+
+.price {
+  padding-top: 0.3rem;
+  padding-bottom: 0.5rem;
+  font-size: 1.5rem;
+  font-family: Barlow-SemiBold, sans-serif;
+}
+.footer-row {
+  padding-bottom: 0.1rem;
+}
+
+.bold-text {
+  font-family: Barlow-SemiBold, sans-serif;
+}
+
+#card-footer {
+  background-color: whitesmoke;
+  margin-top: 1rem;
+  text-align: start;
+  height: 5.5rem;
+}
+
+.card-expand-area {
+  background-color: whitesmoke;
+}
+
+// TODO use a more meaningful name
+.cflag {
+  padding-left: 1rem;
+  background-size: 1.5rem;
+}

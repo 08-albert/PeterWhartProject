@@ -1,0 +1,307 @@
+::placeholder {
+    color: #747474;
+    font-size: 0.8rem;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    background: #e0e0e0;
+    height: 100vh;
+    overflow: hidden;
+    flex-shrink: 0; 
+  }
+
+  a {
+    text-decoration: none;
+    color: #202020;
+    cursor: pointer;
+  }
+  
+  a,
+  li,
+  label {
+    font-size: 0.8rem;
+  }
+
+  .submit-button {
+    border: none;
+    background: #ec1018;
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+
+  .form-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+  }
+  
+  .submit-input {
+    height: 0.8rem;
+    border: 0.1rem solid #ec1018;
+    margin-bottom: 0.3rem;
+    padding: 1rem 0rem;
+  }
+
+  .required-messages{
+    color: red;
+  }
+  
+  .content-footer {
+    flex-grow: 1;
+    padding: 3rem 2rem 0 2rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+  
+  .content-body {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .content-left-col,
+  .content-right-col {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin-top: 3rem;
+  }
+  
+  .copyright-container {
+    padding: 1.8rem 3rem;
+    background: #c4c4c4;
+    text-align: center;
+  }
+  
+  .copyright-info {
+    color: #ec1018;
+    font-weight: bold;
+    font-size: 0.6rem;
+  }
+  
+  .image-container {
+    width: 12rem;
+  }
+  
+  .image-logo {
+    width: 100%;
+    height: auto;
+  }
+  
+  .social-icons {
+    display: flex;
+    align-items: center;
+    margin-top: 2.5rem;
+  }
+  
+  .media-icon {
+    color: #ec1018;
+    font-size: 1.5rem;
+  }
+  
+  .media-icon:not(:last-child) {
+    margin-right: 2.5rem;
+  }
+  
+  .address-container,
+  .email-container,
+  .phone-container,
+  .menu-container,
+  .policy-container,
+  .subscribe-container {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    margin-right: 1rem;
+  }
+
+  .policy-container {
+    font-weight: bolder;
+    margin-left: 2.6rem;
+  }
+
+  .subscribe-container {
+    margin-left: 2.6rem; 
+  }
+ 
+  .address-container,
+  .menu-container {
+    line-height: 2;
+    font-weight: bolder;
+    font-size: 2rem;
+  }
+  
+  .phone-container > a:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  
+  .schedule-container ul,
+  .schedule-container-desktop ul,
+  .menu-container {
+    list-style: none;
+    display: flex; 
+  }
+  
+  .schedule-container-desktop {
+    display: none;
+  }
+  
+  .schedule-lists {
+    display: flex; 
+  }
+  
+  .schedule-list {
+    display: flex;
+    flex-direction: column;
+    text-align: left;  
+  }
+  
+  .schedule-list:first-child {
+    margin-right: 1rem;
+  }
+  
+  .schedule-container ul li:not(:last-child) {
+    margin-bottom: 0.2rem;
+    text-align: 0;
+  }
+  
+  .schedule-title,
+  .subscribe-title {
+    margin-bottom: 1rem;
+    font-weight: bolder;
+  }
+  
+  .menu-container li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .menu-container li a {
+    font-weight: bolder;
+    font-size: 0.8rem;
+  }
+
+  .menu-item {
+    position: relative; 
+  }
+  
+  .menu-item:hover .dropdown-menu {
+    display: flex !important;
+  }
+  
+  .dropdown-menu {
+    display: none !important;
+    position: absolute;
+    background: white;
+    border: 0.01rem solid #ec1018;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    animation: slideDown 50ms linear;
+    margin-top: 1.5rem;
+  }
+  
+  .dropdown-menu-item {
+    padding: 0.3rem 2rem;
+    transition: all 0.1s ease-in-out; 
+    position: relative;
+    white-space: nowrap;
+  }
+  
+  .dropdown-menu-item:hover {
+    background: #ec1018;
+    color: white;
+  }
+  
+  .dropdown-menu-item:not(:first-child) {
+    border-top: 0.1rem solid #ec1018;
+  }
+  
+  .dropdown-icon {
+    color: #202020;
+    margin-left: 0.5rem;
+  }
+  
+  .policy-container a:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+  
+  .subscribe-container label {
+    margin-bottom: 0.5rem;
+  }
+  .schedule-list {
+    padding-left: 0;
+  }
+
+  @keyframes slideDown {
+    from {
+      top: -2rem;
+      opacity: 0;
+    }
+  
+    to {
+      top: 0;
+      opacity: 1;
+    }
+  }
+  
+  @media only screen and (min-width: 1040px) {
+    footer {
+      height: unset;
+      display: flex; 
+    }
+  
+    .content-footer {
+      flex-direction: row;
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 3.5rem 0;
+    }
+  
+    .content-header {
+      margin-right: 4rem;
+      align-self: flex-start;
+    }
+  
+    .content-left-col {
+      margin-right: 2rem; 
+      margin-top: 0;
+      width: unset;
+    }
+  
+    .content-right-col {
+      flex-direction: row;
+      margin-top: 0;
+      width: unset;
+    }
+  
+    .menu-container,
+    .policy-container,
+    .subscribe-container {
+      margin-right: 1rem; 
+    }
+  
+    .schedule-container {
+      display: none;
+    }
+  
+    .schedule-container-desktop {
+      display: flex;
+      flex-direction: column;
+      margin-left:3.5rem;
+    }
+
+    .schedule-list{
+      padding-left: 1;
+      margin: 0 1rem 0 0; 
+    }
+  }
+
+  

@@ -1,0 +1,114 @@
+<mat-accordion
+  ><div class="panel-container">
+    <mat-expansion-panel class="filter-panel" #matExpansionPanel>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Filters </mat-panel-title>
+      </mat-expansion-panel-header>
+      <form (ngSubmit)="onSubmit(filtersForm.value)" [formGroup]="filtersForm">
+        <div class="filters-content">
+          <mat-expansion-panel class="filter-section" formGroupName="category">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h3 class="filter-section-title">Categories</h3>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="filter-section" *ngFor="let item of categories">
+              <mat-checkbox
+                formControlName="{{ item.value }}"
+                [(ngModel)]="item.checked"
+                >{{ item.displayName }}</mat-checkbox
+              >
+            </div>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel class="filter-section" formGroupName="size">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h3 class="filter-section-title">Size</h3>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="filter-section" *ngFor="let item of sizes">
+              <mat-checkbox
+                formControlName="{{ item.value }}"
+                [(ngModel)]="item.checked"
+                >{{ item.displayName }}</mat-checkbox
+              >
+            </div>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel class="filter-section" formGroupName="sort_by">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h3 class="filter-section-title">Sort By</h3>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="filter-section">
+              <mat-radio-group formControlName="sort_type">
+                <mat-radio-button
+                  class="sort-option"
+                  *ngFor="let item of sortByItems"
+                  value="{{ item.value }}"
+                  >{{ item.displayName }}</mat-radio-button
+                >
+              </mat-radio-group>
+            </div>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel
+            class="filter-section"
+            formGroupName="collection"
+          >
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h3 class="filter-section-title">Collection</h3>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="filter-section" *ngFor="let item of collection">
+              <mat-checkbox
+                formControlName="{{ item.value }}"
+                [(ngModel)]="item.checked"
+                >{{ item.displayName }}</mat-checkbox
+              >
+            </div>
+          </mat-expansion-panel>
+
+          <mat-expansion-panel class="filter-section" formGroupName="price">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                <h3 class="filter-section-title">Price</h3>
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="filter-section">
+              <mat-form-field appearance="fill" style="width: 9rem">
+                <mat-label>Min. price</mat-label>
+                <input matInput formControlName="min" />
+                <mat-error
+                  *ngIf="
+                    this.filtersForm.get('price')?.get('min')?.dirty &&
+                    this.filtersForm.get('price')?.get('min')?.hasError
+                  "
+                >
+                  Please enter a valid number
+                </mat-error>
+              </mat-form-field>
+              <mat-form-field appearance="fill" style="width: 9rem">
+                <mat-label>Max. price</mat-label>
+                <input matInput formControlName="max" />
+                <mat-error
+                  *ngIf="
+                    this.filtersForm.get('price')?.get('max')?.dirty &&
+                    this.filtersForm.get('price')?.get('max')?.hasError
+                  "
+                >
+                  Please enter a valid number
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </mat-expansion-panel>
+        </div>
+
+        <button mat-flat-button color="accent" type="submit">Apply</button>
+      </form>
+    </mat-expansion-panel>
+  </div>
+</mat-accordion>

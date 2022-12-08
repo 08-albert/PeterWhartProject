@@ -1,0 +1,22 @@
+img {
+  width: 8em;
+  height: 3.5em;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+@media (min-width:2560px) {
+  img {
+    width: 11em;
+    height: 4.5em;
+  }
+}
+
+@media (max-width:1024px) {
+  img {
+    width: 8em;
+    height: 3.5em;
+  }
+}
+
+

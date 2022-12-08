@@ -1,0 +1,67 @@
+<mat-card
+  class="painting-card"
+  [style.width.px]="cardWidth"
+  style="text-align: center"
+>
+  <mat-card-header class="card-title">
+    <mat-card-title>
+      <div>{{ titleEN }}</div>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-divider class="card-separator"></mat-divider>
+  <mat-card-content>
+    <img
+      class="card-image"
+      mat-card-image
+      src="{{ image }}"
+      alt="{{ titleEN }}"
+      (click)="openDialog()"
+    />
+    <mat-divider class="card-separator"></mat-divider>
+
+    <div class="p-8 pt-0" id="card-footer">
+      <div fxLayout="row" fxLayoutAlign="start center" class="footer-row">
+        <span>{{ price | currency: "$":"symbol":"1.0-0" }} &nbsp;</span>
+        <span class="flag-icon flag-icon-ca cflag"></span>
+        &ensp;&nbsp;|&ensp;&nbsp;ID: &nbsp;
+        <span class="bold-text">{{ id }}&ensp;&nbsp;</span>
+        |&nbsp;&ensp;Year: &nbsp;
+        <span class="bold-text">{{ year }}</span>
+
+        <!--THIS EXPANSION BUTTON HAS BEEN HIDDEN FOR NOW-->
+        <!-- <span class="expander">
+            <button mat-icon-button aria-label="expand card" (click)="cardExpanded = !cardExpanded">
+              <mat-icon *ngIf="cardExpanded">keyboard_arrow_up</mat-icon>
+              <mat-icon *ngIf="!cardExpanded">keyboard_arrow_down</mat-icon>
+          </button>
+          </span> -->
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start" class="footer-row">
+        <div>
+          Dimensions:
+          <span class="bold-text">{{ height }} x {{ width }} in. (WxH)</span>
+          &nbsp;&ensp;|&ensp;&nbsp;Size:
+          <span class="bold-text">{{ size | sizeNaming }}</span>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start" class="footer-row">
+        <div>
+          Category: <span class="bold-text">{{ categoryEN }}</span>
+        </div>
+      </div>
+      <div fxLayout="row" fxLayoutAlign="start" class="footer-row">
+        <div>
+          Collection:
+          <span class="bold-text">{{ collectionEN }}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- THIS EXPANDED AREA HAS BEEN HIDDEN FOR NOW-->
+    <!-- <div class="card-expand-area"  *ngIf="cardExpanded">
+       <div class="card-expanded-content">
+         {{featuresEN}}
+       </div>
+      </div> -->
+  </mat-card-content>
+</mat-card>

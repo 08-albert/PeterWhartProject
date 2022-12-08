@@ -1,0 +1,16 @@
+<app-menu-dropdown
+  [dropDownId]="artistDropDownId"
+  [dropDownName]="artistDropDownName"
+  [dropDownMenuItems]="artistDropDownMenuItems">
+
+</app-menu-dropdown>
+
+<app-menu-dropdown
+  [dropDownId]="galleryDropDownId"
+  [dropDownName]="galleryDropDownName"
+  [dropDownMenuItems]="galleryDropDownMenuItems">
+</app-menu-dropdown>
+
+<button mat-button>ARTWORKS</button>
+
+<button (click)="openNewTab('https://peterwhart.com/contact/')" mat-button>CONTACT</button>

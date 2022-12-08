@@ -1,0 +1,46 @@
+.lang-switch-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.85em;
+}
+
+@media (max-width:2560px) {
+  button:hover {
+    border-bottom: 0.15rem solid red;
+    border-radius: 0;
+  }
+
+  .lang-switch-container {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width:1024px) {
+  button:hover {
+    border-bottom: 0.10rem solid red;
+  }
+}
+
+@media (max-width:768px){
+  button {
+    font-weight: 550;
+  }
+}
+
+@media (max-width:425px){
+  button {
+    font-weight: 500;
+  }
+}
+
+@media (max-width:375px)
+{
+  button.fr {
+    margin-right:-1em;
+  }
+}

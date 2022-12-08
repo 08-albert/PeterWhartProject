@@ -1,0 +1,45 @@
+<span class="button-icon-container">
+
+<ng-container *ngIf="dropDownId === 'menu' else galleryTemplate">
+
+         <button mat-button class="my-button1"
+                 (click)="openNewTab('https://peterwhart.com/the-artist/')">
+        {{dropDownName}}
+      </button>
+
+      <fa-icon [matMenuTriggerFor]="menu"
+               class="dropdown-icon"
+               [icon]="faChevronDown">
+      </fa-icon>
+
+
+
+
+  <mat-menu  backdropClass="my-menu" #menu="matMenu" #beforeMenu="matMenu" xPosition="before">
+    <button  (click)="openNewTab(entry.value)" *ngFor="let entry of dropDownMenuItems | keyvalue "
+            class="menu-item" mat-menu-item> {{entry.key}}
+    </button>
+  </mat-menu>
+</ng-container>
+  </span>
+
+
+<span class="button-icon-container">
+<ng-template #galleryTemplate>
+  <ng-container *ngIf="dropDownId === 'menu2'">
+    <button
+      class="my-button1"
+      (click)="openNewTab('https://peterwhart.com/the-gallery/')" mat-button>{{dropDownName}}
+    </button>
+    <fa-icon mat-button [matMenuTriggerFor]="menu2"  class="dropdown-icon"
+             [icon]="faChevronDown"></fa-icon>
+
+    <mat-menu #menu2="matMenu" #beforeMenu="matMenu" xPosition="before">
+      <button (click)="openNewTab(entry.value)" *ngFor="let entry of dropDownMenuItems  | keyvalue "
+              class="menu-item" mat-menu-item> {{entry.key}}
+
+      </button>
+    </mat-menu>
+  </ng-container>
+</ng-template>
+    </span>

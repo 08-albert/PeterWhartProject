@@ -1,0 +1,10 @@
+<app-filters (filterChange)="onFilterChange($event)"></app-filters>
+<ng-container *ngIf="$groupedPaintings | async as groupedPaintings">
+  <ng-container *ngIf="groupedPaintings.length else noItemsFound">
+    <app-paintings-list [paintings]="groupedPaintings"></app-paintings-list>
+  </ng-container>
+</ng-container>
+
+<ng-template #noItemsFound>
+  <app-no-items-found></app-no-items-found>
+</ng-template>

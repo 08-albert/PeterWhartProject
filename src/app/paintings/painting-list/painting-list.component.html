@@ -1,0 +1,27 @@
+<div id="my-lightbox-host"></div>
+  <mat-grid-list
+    cols="{{ getScreenWidth }}"
+    [gutterSize]="'1rem'"
+    rowHeight="34rem"
+  >
+    <mat-grid-tile *ngFor="let painting of paintings">
+      <app-painting
+        [openCallback]="openCallback"
+        [id]="painting.id"
+        [image]="painting.image"
+        [titleEN]="painting.titleEN"
+        [titleFR]="painting.titleFR"
+        [featuresEN]="painting.featuresEN"
+        [featuresFR]="painting.featuresFR"
+        [year]="painting.year"
+        [price]="painting.priceCAD"
+        [size]="painting.size"
+        [height]="painting.height"
+        [width]="painting.width"
+        [categoryEN]="painting.categoryEN"
+        [collectionEN]="painting.collectionEN"
+      >
+      </app-painting>
+    </mat-grid-tile>
+  </mat-grid-list>
+

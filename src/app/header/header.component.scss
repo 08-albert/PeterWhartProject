@@ -1,0 +1,214 @@
+body {
+  overflow-x: hidden !important;
+}
+
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 0.2em solid red;
+  height: fit-content;
+  min-width: 100vw;
+  overflow-x: hidden !important;
+}
+
+.dropdown-icon {
+  margin-left: 0.5rem;
+}
+.logo-burger-menu, .mobile-menu {
+  display: none;
+}
+
+.mobile-lang-switch {
+  display: none;
+}
+
+@media (max-width:768px) {
+  mat-toolbar {
+    flex-direction: column;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .language-selector {
+    align-self: flex-end;
+  }
+
+  .logo-burger-menu {
+    width: inherit;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin:0.4em 1.2em;
+  }
+
+  .mobile-logo-lang  {
+    margin-left: 0.3em;
+  }
+
+  input {
+    background: transparent;
+    border: none;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+
+  .accordion > input {
+    display: none;
+  }
+
+  .accordion > input + label {
+    display: flex;
+    justify-content: center;
+    padding: 0.9em 0;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .accordion .accordion-content {
+    background: #f8f8f8;
+    text-align: center;
+  }
+
+  .accordion > input + label + .accordion-content {
+    display: none;
+  }
+
+  .accordion > input:checked + label + .accordion-content {
+    display: block;
+  }
+
+  .accordion {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  label.label-first-dropdown{
+    border-right: 1px solid red;
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
+    font-size: 1em;
+  }
+
+  .links a.label-first-dropdown-link {
+    border-top: none;
+  }
+
+  a {
+    border: none;
+    text-align: center;
+  }
+
+  .links a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid red;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 0.9em 0 0.9em 0;
+    font-size: 1em;
+  }
+
+  .links a.first {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .links a.last{
+    border-top: none;
+  }
+
+  .label-second-dropdown{
+    border-right: 1px solid red;
+    border-left: 1px solid red;
+    border-bottom: 1px solid red;
+    font-size: 1em;
+  }
+
+  .accordion, .accordion-content {
+    width: 100vw;
+  }
+
+  .accordion label {
+    width: 100vw;
+  }
+
+  .mobile-menu-buttons a {
+    display: flex;
+    justify-content: center;
+    border: 1px solid red;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 0.9em 0 0.9em 0;
+    border-top: 0;
+    font-size: 1em;
+  }
+
+  .hover:hover {
+    color:white;
+    background-color: red;
+  }
+
+  .btn {
+    cursor: pointer;
+    margin: 20px;
+    color: white;
+    width: fit-content;
+  }
+
+  .icon-bar {
+    width: 22px;
+    height: 2px;
+    background: #ffffff;
+    margin: 3px;
+    position: relative;
+  }
+
+  .btn.burger-menu.icon-bar {
+    color: white;
+  }
+
+}
+
+
+.btn-active {
+  padding-left: 7px;
+}
+
+.btn-default {
+  padding-left: 0px;
+}
+.menu-container {
+  display: flex;
+  background-color: black;
+  width:  1.65em;
+  height:  1.65em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25em;
+}

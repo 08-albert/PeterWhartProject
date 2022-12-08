@@ -1,0 +1,152 @@
+<footer  class="container">
+    <div class="content-footer">
+      <div class="content-header">
+        <div class="image-container">
+         <a href="https://peterwhart.com/">
+          <img src="../assets/images/peterwhart.png"  alt="logo"class="image-logo"/>
+         </a> 
+        </div>
+  
+        <div class="social-icons">
+          <a class="media-icon" href="https://www.facebook.com/PETERwHARTGallery">
+            <fa-icon [icon]="faFacebook"></fa-icon>
+          </a>
+          <a class="media-icon" href="https://www.linkedin.com/in/peterwhart/">
+            <fa-icon [icon]="faLinkedin"></fa-icon>
+          </a>
+          <a class="media-icon" href="https://twitter.com/pwhgallery">
+            <fa-icon [icon]="faTwitter"></fa-icon>
+          </a>
+          <a class="media-icon" href="https://www.youtube.com/channel/UCO_ZtXhNs-BV8BqrJx0zAig/featured">
+            <fa-icon [icon]="faYoutube"></fa-icon>
+          </a>
+        </div>
+      </div>
+  
+      <div class="content-body">
+        <div class="content-left-col">
+          <div class="address-container">
+            <a class="address-info">367 Saint-Paul Street East</a>
+            <a class="address-info">Montreal, QC</a>
+            <a class="address-info">H2Y 1H3</a>
+            <a class="address-info">Canada</a>
+          </div>
+  
+          <div class="email-container">
+            <a class="email-link" href="mailto:contact@peterwhart.com"
+              >contact@PETERwHART.com</a
+            >
+          </div>
+  
+          <div class="phone-container">
+            <a class="phone-link" href="tel:+1 888-856-6325">+1 888-856-6325</a>
+            <a class="phone-link" href="tel:514-856-6325">514-856-6325</a>
+          </div>
+  
+          <div class="schedule-container">
+            <a class="schedule-title">Opening hours</a>
+            <div class="schedule-lists">
+              <ul class="schedule-list">
+                <li class="schedule-item">Mon</li>
+                <li class="schedule-item">Tue</li>
+                <li class="schedule-item">Wed</li>
+                <li class="schedule-item">Thu</li>
+                <li class="schedule-item">Fri</li>
+                <li class="schedule-item">Sat</li>
+                <li class="schedule-item">Sun</li>
+              </ul>
+              <ul class="schedule-list">
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+  
+        <div class="content-right-col">
+          <ul class="menu-container">
+            <li class="menu-item">
+              <a href="https://peterwhart.com/the-artist/">THE ARTIST</a>
+              <fa-icon class="dropdown-icon" [icon]="faChevronDown"></fa-icon>
+              <div class="dropdown-menu">
+                <a class="dropdown-menu-item" href="https://peterwhart.com/blog/" >Blog</a>
+              </div>
+            </li>
+            <li class="menu-item">
+              <a href="https://peterwhart.com/the-gallery/">THE GALLERY</a>
+              <fa-icon class="dropdown-icon" [icon]="faChevronDown"></fa-icon>
+              <div class="dropdown-menu">
+                <a href="https://peterwhart.com/customer-and-collector-testimonials/" class="dropdown-menu-item">Testimonials</a>
+                <a href="https://peterwhart.com/events-news/" class="dropdown-menu-item">Event & news</a>
+                <a href="https://peterwhart.com/the-studio/" class="dropdown-menu-item">The studio</a>
+              </div>
+            </li>
+            <li class="menu-item">
+              <a href="#">ARTWORKS</a>
+            </li>
+            <li class="menu-item">
+              <a href="https://peterwhart.com/contact/">CONTACT</a>
+            </li>
+          </ul>
+  
+          <div class="policy-container">
+            <a href="https://peterwhart.com/shipping-policy/" class="policy-info">Shipping Policy</a>
+            <a href="https://peterwhart.com/privacy-policy/" class="policy-info">Privacy Policy</a>
+          </div>
+  
+          <div class="subscribe-container">
+            <a class="subscribe-title">Subscribe to our newsletter</a>
+
+          <form class="form-container" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <label for="emailInput" class="subscribe-label">Email
+              <span style="color: red;">*</span>
+            </label>
+
+              <input class="submit-input" style="text-align: center;" id="emailInput" type="email" placeholder="Type your email here" formControlName="email"/>
+              <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                <div class="required-messages" *ngIf="f['email'].errors?.['required']">This field is required!</div>
+                <div class="required-messages" *ngIf="f['email'].errors?.['email']">Please enter a valid email address!</div>
+            </div>
+            <button (click)="onSubmit" class="submit-button" type="submit">Submit</button>
+          </form>
+          </div>
+
+          <div class="schedule-container-desktop">
+            <h5 class="schedule-title">Opening hours</h5>
+            <div class="schedule-lists">
+              <ul class="schedule-list">
+                <li class="schedule-item">Mon</li>
+                <li class="schedule-item">Tue</li>
+                <li class="schedule-item">Wed</li>
+                <li class="schedule-item">Thu</li>
+                <li class="schedule-item">Fri</li>
+                <li class="schedule-item">Sat</li>
+                <li class="schedule-item">Sun</li>
+              </ul>
+              <ul class="schedule-list">
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+                <li class="schedule-item">10AM - 6PM</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="copyright-container">
+      <h6 class="copyright-info">
+        ©2022 PETERwHART Gallery All rights reserved.
+      </h6>
+    </div>
+  </footer>
+  

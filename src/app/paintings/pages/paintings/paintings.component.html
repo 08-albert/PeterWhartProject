@@ -1,0 +1,10 @@
+<app-filters (filterChange)="onFilterChange($event)"></app-filters>
+<ng-container *ngIf="$paintings | async as paintings">
+  <ng-container *ngIf="paintings.length else noItemsFound">
+    <app-paintings-list [paintings]="paintings"></app-paintings-list>
+  </ng-container>
+</ng-container>
+
+<ng-template #noItemsFound>
+  <app-no-items-found></app-no-items-found>
+</ng-template>

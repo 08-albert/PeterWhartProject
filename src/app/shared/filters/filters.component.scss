@@ -1,0 +1,39 @@
+.panel-container {
+  display: flex;
+  text-align: start;
+  justify-content: center;
+  align-items: flex-start;
+
+  .filter-panel {
+    width: 100vw;
+    margin: 1rem;
+  }
+  .sort-option {
+    margin-top: 0.4rem;
+    margin-left: -0.5rem;
+  }
+
+  .filter-section {
+    margin: 0.3rem 0.5rem 0.3rem 0;
+    width: 13rem;
+    height: max-content;
+    .filter-section-title {
+      font-weight: bold;
+      margin-bottom: 0;
+    }
+
+    .filter-section-content {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      justify-content: start;
+      padding: 0;
+    }
+  }
+
+  .filters-content {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    justify-content: start;
+  }
+}

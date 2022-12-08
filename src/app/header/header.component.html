@@ -1,0 +1,62 @@
+<mat-toolbar>
+  <div class="logo">
+    <app-logo></app-logo>
+  </div>
+
+  <div class="menu">
+    <app-menu></app-menu>
+  </div>
+
+  <div class="language-selector">
+    <app-language-selector></app-language-selector>
+  </div>
+
+  <div class="logo-burger-menu">
+    <div class="mobile-logo-mobile">
+      <app-logo></app-logo>
+    </div>
+    <!-- Burger Menu Animated Start-->
+    <div class="menu-container">
+      <div [ngClass]="[btnStyle]" (click)="onClick();toggleMenu();" class="btn">
+        <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'topX'"></div>
+        <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'hide'"></div>
+        <div class="icon-bar" [@hamburguerX]="isHamburguer ? 'hamburguer' : 'bottomX'"></div>
+      </div>
+      <!--Burger Menu ANIMATED End-->
+    </div>
+
+  </div>
+</mat-toolbar>
+
+<!--Mobile Menu Start-->
+<div class="mobile-menu accordion mb-3" *ngIf="isDisabled==true">
+  <input type="checkbox" id="item1">
+  <label class="label-first-dropdown hover" for="item1">THE ARTIST
+    <fa-icon class="dropdown-icon" [icon]="faChevronDown"></fa-icon>
+  </label>
+  <div class="accordion-content">
+    <div class="links">
+      <a class="label-first-dropdown-link hover"> BLOG</a>
+    </div>
+  </div>
+
+  <input type="checkbox" id="item2">
+  <label class="label-second-dropdown hover" for="item2">THE GALLERY
+    <fa-icon class="dropdown-icon" [icon]="faChevronDown"></fa-icon>
+  </label>
+  <div class="accordion-content">
+    <div class="links">
+      <a class="first hover" href=""> TESTIMONIALS</a>
+      <a class="hover" href=""> EVENTS & NEWS</a>
+      <a class="last hover" href=""> THE STUDIO</a>
+    </div>
+
+  </div>
+  <div class="mobile-menu-buttons">
+    <a class="hover"> ARTWORKS</a>
+    <a  class="hover" href=""> CONTACT</a>
+  </div>
+
+</div>
+
+
